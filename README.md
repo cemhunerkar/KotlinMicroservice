@@ -1,2 +1,2 @@
 # KotlinMicroservice
-A demo with Kotlin, Spring Data JPA, MariaDB, Microservices, Zuul Proxy
+A demo with Kotlin, Spring Data JPA, MariaDB, Microservices, Zuul Proxy (slowly :) )
