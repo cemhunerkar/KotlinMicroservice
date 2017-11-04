@@ -1,7 +1,7 @@
 package com.cem.department.model
 
-data class DepartmentDTO(val dept_name: String = "", val dept_location: String = "")
+data class DepartmentDTO(val deptName: String = "", val deptLocation: String = "")
 
 fun DepartmentDTO.toDepartment(): Department {
-	return Department(dept_name = dept_name, dept_location = dept_location)
+	return Department(dept_name = deptName, dept_location = deptLocation)
 }

@@ -20,8 +20,8 @@ class DepartmentController(val deptRepo: DepartmentRepository) {
 
 	@ResponseStatus(HttpStatus.OK)
 	@GetMapping("/dept/{deptId}")
-	fun getDept(@PathVariable deptId: Int): DepartmentDTO {
-		return deptRepo.findOne(deptId).toDepartmentDTO()
+	fun getDept(@PathVariable deptId: String): DepartmentDTO {
+		return deptRepo.findOne(deptId.toInt()).toDepartmentDTO()
 	}
 
 	@PostMapping("/dept")

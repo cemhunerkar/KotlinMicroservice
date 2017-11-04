@@ -6,7 +6,7 @@ import javax.persistence.Id
 import javax.persistence.Table
 
 @Entity
-@Table(name = "department")
+@Table(name = "departments")
 class Department(@Id @GeneratedValue val dept_id: Int? = null,
 				 val dept_name: String = "",
 				 val dept_location: String = "")
