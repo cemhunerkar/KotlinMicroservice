@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: gateway
+zuul:
+  routes:
+    dept:
+      url: http://localhost:8091
+    emp:
+      url: http://localhost:8090
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka
+server:
+  port: 8080
