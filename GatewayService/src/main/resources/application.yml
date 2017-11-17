@@ -4,12 +4,20 @@ spring:
 zuul:
   routes:
     dept:
-      url: http://localhost:8091
+      path: /dept/**
+      serviceId: department-service
+      stripPrefix: false
     emp:
-      url: http://localhost:8090
+      path: /emp/**
+      serviceId: employee-service
+      stripPrefix: false
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:1111/eureka
+    registerWithEureka: false
 server:
   port: 8080
+ribbon:
+  eureka:
+    enabled: true

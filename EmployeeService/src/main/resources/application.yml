@@ -1,14 +1,20 @@
 spring:
   application:
-    name: emp
+    name: employee-service
   datasource:
-    url: jdbc:mariadb://localhost:3306/cemgiz
+    url: jdbc:mariadb://localhost:3306/kotlin
     username: root
     password: root
     driver-class-name: org.mariadb.jdbc.Driver
 server:
   port: 8090
 eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
   client:
     serviceUrl:
       defaultZone: http://localhost:1111/eureka
+ribbon:
+  eureka:
+    enabled: true
