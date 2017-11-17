@@ -14,8 +14,10 @@ import org.springframework.web.bind.annotation.ResponseStatus
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.util.UriComponentsBuilder
 import java.net.URI
+import org.springframework.web.bind.annotation.CrossOrigin
 
 @RestController
+@CrossOrigin
 class DepartmentController(val deptRepo: DepartmentRepository) {
 
 	@ResponseStatus(HttpStatus.OK)

@@ -1,11 +1,12 @@
 package com.cem.employee
 
 import com.cem.employee.model.EmployeeDTO
-import com.cem.employee.model.toEmployeeDTO
 import com.cem.employee.model.toEmployee
+import com.cem.employee.model.toEmployeeDTO
 import com.cem.employee.persistance.EmployeeRepository
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
@@ -16,6 +17,7 @@ import org.springframework.web.util.UriComponentsBuilder
 import java.net.URI
 
 @RestController
+@CrossOrigin
 class EmployeeController(val empRepo: EmployeeRepository) {
 
 	@ResponseStatus(HttpStatus.OK)
